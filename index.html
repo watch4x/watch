@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        function redirectToBot() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const code = urlParams.get('code');
+
+            if (code) {
+                const botUrl = `https://t.me/watch4kbot?start=action=verify__code=${code}`;
+                window.location.href = botUrl;
+            } else {
+                document.getElementById('message').innerText = "No data provided in the URL.\nTry again.";
+            }
+        }
+      
+        window.onload = redirectToBot;
+    </script>
+</head>
+<body>
+    <h1>Redirecting...</h1>
+    <p id="message">Please wait while we redirect you.</p>
+</body>
+</html>
