@@ -10,7 +10,7 @@
             const code = urlParams.get('code');
 
             if (code) {
-                const botUrl = `https://t.me/watch4kbot?start=action=verify__code=${code}`;
+                const botUrl = `https://t.me/watch4k_pay_bot?start=action=verify__code=${code}`;
                 window.location.href = botUrl;
             } else {
                 document.getElementById('message').innerText = "No data provided in the URL.\nTry again.";
