@@ -8,15 +8,14 @@
         function redirectToBot() {
             const urlParams = new URLSearchParams(window.location.search);
             const code = urlParams.get('code');
-
+        
             if (code) {
-                const botUrl = `https://t.me/watch4k_pay_bot?start=action=verify__code=${code}`;
-                window.location.href = botUrl;
+                window.location.href = `https://t.me/watch4k_pay_bot?start=poc=${code}`;
             } else {
-                document.getElementById('message').innerText = "No data provided in the URL.\nTry again.";
+                window.location.href = "https://t.me/watch4kbot?start=src=github";
             }
         }
-      
+    
         window.onload = redirectToBot;
     </script>
 </head>
